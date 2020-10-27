@@ -1,0 +1,25 @@
+@import '../../css/variables';
+
+.header-wrapper {
+ display: inline-flex;
+  margin: 0;
+}
+.header-image-wrapper {
+  background-color: $main-blue;
+}
+.header-image {
+  width: 20%;
+}
+.nav-menu {
+  display: inline-flex;
+  background-color: $main-red;
+  height: 4rem;
+  text-decoration: none;
+}
+.nav-element {
+  margin: 0 1.5rem;
+  font-size: 1rem;
+  display: inline-block;
+  width: 7rem;
+  text-decoration: none;
+}
