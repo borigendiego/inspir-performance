@@ -3,3 +3,26 @@
 $main-red: #B52127;
 $main-blue: #1D386C;
 
+//Fonts
+$text-font-family: 'Gotham black italic';
+$medium-font-family: 'Gotham medium';
+$book-font-family: 'Gotham book';
+
+@font-face {
+  font-family: 'Gotham book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Gotham-Book.otf');
+}
+@font-face {
+  font-family: 'Gotham black italic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Gotham-BlackIta.otf');
+}
+@font-face {
+  font-family: 'Gotham medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Gotham-Medium.otf');
+}

@@ -11,6 +11,8 @@ function App() {
     <div className="App">
       <Header />
       <Home />
+      <Performance />
+      <Contact />
     </div>
   );
 }
