@@ -3,7 +3,7 @@ import './App.css';
 //Components
 import Header from "./components/header";
 import Home from "./components/home";
-import Contact from "./components/contact";
+import Form from "./components/contact/Form";
 import Performance from "./components/performance";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Home />
       <Performance />
-      <Contact />
+      <Form />
     </div>
   );
 }
