@@ -3,7 +3,7 @@ import './form.scss'
 
 const Form = () => {
     return(
-        <div className={'contact-section'} id={'contact'}>
+        <div className={'form-section'} id={'contact'}>
                 <h1 className={'contact-title'}>CONTACT US</h1>
                 <form className={'contact-form'}>
                     <section className={'contact-item'}>
