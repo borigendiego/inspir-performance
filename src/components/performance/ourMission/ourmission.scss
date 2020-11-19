@@ -1,0 +1,66 @@
+@import '../../../css/variables';
+
+.our-mission-section {
+  height: 100vh;
+  background-image: url('../../../assets/images/ourmission.jpg');
+  background-size: cover;
+}
+.our-mission-title {
+  font-family: $text-font-family;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3.5rem;
+  color: #FFFFFF;
+  position: relative;
+  top: 14rem;
+  margin-right: 2rem;
+}
+.our-mission-link {
+  font-family: $text-font-family;
+  display: block;
+  position: relative;
+  top: 16rem;
+  margin-right: 2rem;
+  font-size: 2rem;
+  text-align: right;
+  box-sizing: border-box;
+}
+.elite {
+  color: #FFFFFF;
+}
+.co {
+  color: $main-blue;
+}
+.executive {
+  color: $main-red;
+}
+.our-mission-white-overlay {
+  clip-path: polygon(0 0, 41% 0, 20% 100%, 0% 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffff;
+}
+.our-mission-blue-overlay {
+  clip-path: polygon(36% 0, 41% 0, 24% 100%, 19% 100%);
+  background-color: $main-blue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.our-mission-red-overlay {
+  clip-path: polygon(36% 0, 41% 0, 24% 100%, 19% 100%);
+  background-color: $main-red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 4rem;
+}
+.our-mission-links {
+  width: 3rem;
+}

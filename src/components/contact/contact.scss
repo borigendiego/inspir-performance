@@ -6,6 +6,7 @@
   height: 100vh;
   display: inline-flex;
   width: 100%;
+  position: relative;
 }
 .contact-logo {
   width: 35%;
@@ -15,7 +16,8 @@
 .contact-info-wrapper {
   display: inline;
   margin-top: 7rem;
-
+  z-index: 2;
+  position: relative;
 }
 .contact-content {
   color: #FFFFFF;
@@ -31,4 +33,15 @@
 }
 .contact-info-item {
   margin: 0.7rem 0;
+}
+.contact-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffff;
+  opacity: 0.5;
+  clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
+  z-index: 1;
 }

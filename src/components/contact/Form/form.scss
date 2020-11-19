@@ -1,6 +1,8 @@
 @import '../../../css/variables';
 .form-section {
   margin-left: 7rem;
+  position: relative;
+  z-index: 2;
 }
 .contact-title {
   font-family: $text-font-family;
@@ -41,4 +43,9 @@ input[type=submit] {
     background-color: #FFF;
     transition: all 0.3s;
   }
+}
+.contact-select {
+  border: 1px solid #ccc;
+  height: 1.8rem;
+  width: 25.4em;
 }

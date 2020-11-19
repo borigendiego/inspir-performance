@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './performance.scss';
+import {
+    Link
+} from 'react-router-dom';
+//Constants
+import { ROUTES_NAMES } from '../../constants'
 
 const Performance = () => {
     const [isLeftHover, setIsLeftHover] = useState(false);
@@ -8,13 +13,15 @@ const Performance = () => {
     return(
         <div className={'performance-section'}>
                 <div className={'items-wrapper'}>
-                    <div
-                        className={`${isRightHover ? 'performance-items hide-section item-one' : 'performance-items item-one'}`}
-                        onMouseEnter={() => setIsLeftHover(true)}
-                        onMouseLeave={() => setIsLeftHover(false)}
-                    >
-                        <h2 className={'performance-item-title-left'}>SPORT PERFORMANCE</h2>
-                    </div>
+                    <Link to={ROUTES_NAMES.MISSION}>
+                        <div
+                            className={`${isRightHover ? 'performance-items hide-section item-one' : 'performance-items item-one'}`}
+                            onMouseEnter={() => setIsLeftHover(true)}
+                            onMouseLeave={() => setIsLeftHover(false)}
+                        >
+                            <h2 className={'performance-item-title-left'}>SPORT PERFORMANCE</h2>
+                        </div>
+                    </Link>
                     <div
                         className={`${isLeftHover ? 'performance-items hide-section item-two' : 'performance-items item-two'}`}
                         onMouseEnter={() => setIsRightHover(true)}

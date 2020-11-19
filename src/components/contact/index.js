@@ -7,6 +7,7 @@ const Contact = () => {
     return(
         <div className={'contact-section'}>
             <Form />
+            <div className={'contact-overlay'} />
             <div className={'contact-info-wrapper'}>
                 <img src={logo} alt={'logo'} className={'contact-logo'}/>
                 <div className={'contact-content'}>
