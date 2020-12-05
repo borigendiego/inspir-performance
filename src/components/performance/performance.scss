@@ -1,4 +1,5 @@
 @import '../../css/variables';
+
 .performance-section {
   height: 95vh;
   background-image: url('../../assets/images/performance.png');
@@ -6,6 +7,7 @@
   display: flex;
   transition: all 0.5s ease;
 }
+
 .items-wrapper {
   display: inline-flex;
   position: relative;
@@ -13,6 +15,7 @@
   width: 100vw;
   margin-top: 2rem;
 }
+
 .performance-items {
     display: flex;
     position: absolute;
@@ -23,17 +26,20 @@
     height: 60%;
     transition: all 0.5s ease;
 }
+
 .item-one {
   top: 10%;
   left: 0;
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
   justify-content: flex-end;
 }
+
 .item-two {
   right: 0;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
   top: 35%;
 }
+
 .performance-item-title-left {
   margin-right: 11rem;
   margin-top: 3rem;
@@ -41,6 +47,7 @@
   color: #FFFFFF;
   font-size: 2.5rem;
 }
+
 .performance-item-title-right {
   margin-left: 11rem;
   margin-top: 15rem;
@@ -48,9 +55,11 @@
   color: #FFFFFF;
   font-size: 2.5rem;
 }
+
 .hover-element {
   visibility: hidden;
 }
+
 .red-background {
   background-color: $main-red;
   color: #ffff;
@@ -63,6 +72,7 @@
   transition: all 0.5s ease;
   z-index: 1;
 }
+
 .move-right {
   clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
   width: 40%;
@@ -76,21 +86,26 @@
     display: none;
   }
 }
+
 .move-left {
   clip-path: polygon(0% 0%, 100% 0, 80% 100%, 0 100%);
   width: 40%;
   left: 0;
   padding: 0 300px 0 20px;
+
   .hide-section {
     display: inline;
   }
+
   .red-background-content-left {
     display: none;
   }
 }
+
 .hide-section {
   display: none;
 }
+
 .red-background-title {
   color: #FFF;
   display: block;
@@ -100,6 +115,7 @@
   margin-top: 6rem;
   font-family: $book-font-family;
 }
+
 .red-background-text {
   font-size: 1.1rem;
   text-align: left;

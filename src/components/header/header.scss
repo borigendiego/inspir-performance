@@ -4,10 +4,12 @@
   display: inline-flex;
   margin: 0;
 }
+
 .header-image-wrapper {
   background-color: $main-blue;
   width: 50%;
 }
+
 .header-image {
   width: 35%;
   position: relative;
@@ -16,6 +18,7 @@
   right: 3.5rem;
   padding: 0.2rem 0 1.5rem 0;
 }
+
 .nav-menu {
   display: inline-flex;
   background-color: $main-red;
@@ -26,6 +29,7 @@
   padding-top: 0.5rem;
   padding-left: 10rem;
 }
+
 .nav-element {
   margin: 0 1rem;
   font-size: 0.85rem;

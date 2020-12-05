@@ -12,10 +12,13 @@ const OurMissionItem = (props) => {
               <p className={'our-mission-item-text'}>{props.text}</p>
           </div>
           <div className={'our-mission-item-link-wrapper'}>
-              <Link to={props.linkToOne}>
+              <Link to={'/'} className={'our-mission-item-back-arrow'}>
+                  <span>&#8249; BACK</span>
+              </Link>
+              <Link to={props.linkToOne} className={'our-mission-item-links'}>
                   <h2 className={'our-mission-item-link-one'}>{props.linkTextOne}</h2>
               </Link>
-              <Link to={props.linkToTwo}>
+              <Link to={props.linkToTwo} className={'our-mission-item-links'}>
                   <h2 className={'our-mission-item-link-two'}>{props.linkTextTwo}</h2>
               </Link>
           </div>

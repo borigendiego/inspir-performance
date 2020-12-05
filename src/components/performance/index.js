@@ -5,13 +5,16 @@ import {
 } from 'react-router-dom';
 //Constants
 import { ROUTES_NAMES } from '../../constants'
+//Images
+import business from '../../assets/images/business.png';
+import sports from '../../assets/images/sport.png';
 
 const Performance = () => {
     const [isLeftHover, setIsLeftHover] = useState(false);
     const [isRightHover, setIsRightHover] = useState(false);
 
     return(
-        <div className={'performance-section'}>
+        <div className={'performance-section'} style={isRightHover ?{backgroundImage: business}: {backgroundImage: sports}}>
                 <div className={'items-wrapper'}>
                     <Link to={ROUTES_NAMES.MISSION}>
                         <div

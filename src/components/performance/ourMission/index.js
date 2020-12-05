@@ -10,8 +10,8 @@ const OurMission = () => {
             <div className={'our-mission-white-overlay'}/>
             <div className={'our-mission-blue-overlay'}/>
             <div className={'our-mission-red-overlay'}/>
-            <h1 className={'our-mission-title'}>OUR MISSION</h1>
-            <div className={'links-wrapper'}>
+            <div className={'our-mission-text'}>
+                <h1 className={'our-mission-title'}>OUR MISSION</h1>
                 <Link to={'/elite'} className={'our-mission-links'}>
                     <h2 className={'our-mission-link elite'}>ELITE ATHLETES</h2>
                 </Link>

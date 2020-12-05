@@ -1,6 +1,6 @@
 import React from 'react';
 import './form.scss';
-import { FORM_INPUTS } from "../../common/constants";
+import { FORM_INPUTS } from '../../common/constants';
 
 
 const Form = () => {

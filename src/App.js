@@ -6,8 +6,8 @@ import {
     Route
 } from 'react-router-dom';
 //Constants
-import {ROUTES_NAMES} from './constants';
-import {ELITE_TEXT, DEVELOPMENT_TEXT, EXECUTIVE_TEXT } from './components/performance/ourMission/ourMissionItem/constant'
+import { ROUTES_NAMES } from './constants';
+import { ELITE_TEXT, DEVELOPMENT_TEXT, EXECUTIVE_TEXT } from './components/performance/ourMission/ourMissionItem/constant'
 //Components
 import Header from './components/header';
 import Home from './components/home';
@@ -30,7 +30,7 @@ function App() {
                 <Route path={ROUTES_NAMES.MISSION}>
                     <OurMission />
                 </Route>
-                <Route exact path={'/elite'}>
+                <Route exact path={ROUTES_NAMES.ELITE}>
                     <OurMissionItem
                         title={'ELITE ATHLETES'} text={ELITE_TEXT}
                         myClassName={'our-mission-elite'}
@@ -40,7 +40,7 @@ function App() {
                         linkToTwo={'/executive'}
                     />
                 </Route>
-                <Route exact path={'/co-development'}>
+                <Route exact path={ROUTES_NAMES.CO}>
                     <OurMissionItem
                         title={'CO-DEVELOPMENT WITH MANAGERS AND STAFF'} text={DEVELOPMENT_TEXT}
                         myClassName={'our-mission-co'}
@@ -50,7 +50,7 @@ function App() {
                         linkToTwo={'/elite'}
                     />
                 </Route>
-                <Route exact path={'/executive'}>
+                <Route exact path={ROUTES_NAMES.EXECUTIVE}>
                     <OurMissionItem
                         title={'EXECUTIVE SUPPORT'} text={EXECUTIVE_TEXT}
                         myClassName={'our-mission-executive'}

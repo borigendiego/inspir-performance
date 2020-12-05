@@ -8,17 +8,20 @@
   width: 100%;
   position: relative;
 }
+
 .contact-logo {
   width: 35%;
   position: relative;
   left: 13rem;
 }
+
 .contact-info-wrapper {
   display: inline;
   margin-top: 7rem;
   z-index: 2;
   position: relative;
 }
+
 .contact-content {
   color: #FFFFFF;
   font-size: 1.3rem;
@@ -31,9 +34,11 @@
     font-family: $book-font-family;
   }
 }
+
 .contact-info-item {
   margin: 0.7rem 0;
 }
+
 .contact-overlay {
   position: absolute;
   width: 100%;

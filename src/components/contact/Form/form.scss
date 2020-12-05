@@ -4,32 +4,38 @@
   position: relative;
   z-index: 2;
 }
+
 .contact-title {
   font-family: $text-font-family;
   text-align: left;
   position: relative;
   left: 3rem;
 }
+
 .contact-form {
   display: inline;
   align-content: start;
   height: 100vh;
 }
+
 .contact-input {
   border: 1px solid #ccc;
   height: 1.5rem;
   width: 25em;
 }
+
 .contact-item {
   text-align: left;
   padding: 1rem 0 0.5rem 3rem;
 }
+
 .contact-label {
   font-family: $book-font-family;
   display: block;
   font-size: 0.84rem;
   margin-bottom: 0.2rem;
 }
+
 input[type=submit] {
   background-color: $main-red;
   color: #000;
@@ -44,6 +50,7 @@ input[type=submit] {
     transition: all 0.3s;
   }
 }
+
 .contact-select {
   border: 1px solid #ccc;
   height: 1.8rem;

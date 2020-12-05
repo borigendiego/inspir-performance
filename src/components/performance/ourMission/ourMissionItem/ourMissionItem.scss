@@ -5,21 +5,25 @@
   display: inline-flex;
   position: relative;
 }
+
 .our-mission-item-wrapper {
   width: 50%;
   padding: 2rem 0 0 1.5rem;
   z-index: 2;
 }
+
 .our-mission-item-title {
   font-family: $text-font-family;
   text-align: left;
 }
+
 .our-mission-item-text {
   text-align: left;
   padding-top: 2rem;
   font-size: 1.2rem;
   font-family: $book-font-family;
 }
+
 .our-mission-item-link-wrapper {
   font-family: $text-font-family;
   font-size: 1.2rem;
@@ -27,9 +31,10 @@
   text-align: right;
   position: relative;
   left: 12rem;
-  padding-top: 27rem;
+  padding-top: 26rem;
   z-index: 2;
 }
+
 .our-mission-item-first-overlay {
   position: absolute;
   width: 100%;
@@ -40,6 +45,7 @@
   clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
   z-index: 1;
 }
+
 .our-mission-item-second-overlay {
   clip-path: polygon(100% 0, 70% 0, 55% 100%, 100% 100%);
   position: absolute;
@@ -50,6 +56,28 @@
   z-index: 1;
 }
 
+.our-mission-item-back-arrow {
+  font-family: $book-font-family;
+  font-size: 2rem;
+  height: 20%;
+  position: relative;
+  bottom: 25rem;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.our-mission-item-back-arrow:hover{
+  text-decoration: underline;
+}
+
+.our-mission-item-links {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+
 .our-mission-elite {
   background-image: url('../../../../assets/images/image-elite.jpg');
   background-size: cover;
@@ -57,16 +85,20 @@
   .our-mission-item-link-one {
     color: $main-blue;
   }
+
   .our-mission-item-link-two {
     color: $main-red;
   }
+
   .our-mission-item-first-overlay {
     background-color: #FFFFFF;
   }
+
   .our-mission-item-second-overlay {
     background-color: #FFFFFF;
   }
 }
+
 .our-mission-co {
   background-image: url('../../../../assets/images/image-codevelopment.jpg');
   background-size: cover;
@@ -75,16 +107,24 @@
   .our-mission-item-link-one {
     color: $main-red;
   }
+
   .our-mission-item-link-two {
     color: #FFF;
   }
+
   .our-mission-item-first-overlay {
     background-color: $main-blue;
   }
+
   .our-mission-item-second-overlay {
     background-color: $main-blue;
   }
+
+  .our-mission-item-back-arrow {
+    color: #FFFFFF;
+  }
 }
+
 .our-mission-executive {
   background-image: url('../../../../assets/images/executive.jpg');
   background-size: cover;
@@ -93,13 +133,20 @@
   .our-mission-item-link-one {
     color: #FFF;
   }
+
   .our-mission-item-link-two {
     color: $main-blue;
   }
+
   .our-mission-item-first-overlay {
     background-color: $main-red;
   }
+
   .our-mission-item-second-overlay {
     background-color: $main-red;
+  }
+
+  .our-mission-item-back-arrow {
+    color: #FFFFFF;
   }
 }
