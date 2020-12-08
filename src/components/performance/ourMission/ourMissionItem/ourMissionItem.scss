@@ -84,10 +84,23 @@
 
   .our-mission-item-link-one {
     color: $main-blue;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: $main-red;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-link-two {
     color: $main-red;
+    border-radius: 1rem;
+
+
+    &:hover {
+      background-color: $main-blue;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-first-overlay {
@@ -106,10 +119,22 @@
 
   .our-mission-item-link-one {
     color: $main-red;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: #FFFFFF;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-link-two {
     color: #FFF;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: $main-red;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-first-overlay {
@@ -132,10 +157,22 @@
 
   .our-mission-item-link-one {
     color: #FFF;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: $main-blue;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-link-two {
     color: $main-blue;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: #FFFFFF;
+      transition: all 0.3s;
+    }
   }
 
   .our-mission-item-first-overlay {

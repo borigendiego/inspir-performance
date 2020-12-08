@@ -12,7 +12,7 @@ const OurMissionItem = (props) => {
               <p className={'our-mission-item-text'}>{props.text}</p>
           </div>
           <div className={'our-mission-item-link-wrapper'}>
-              <Link to={'/'} className={'our-mission-item-back-arrow'}>
+              <Link to={'/mission'} className={'our-mission-item-back-arrow'}>
                   <span>&#8249; BACK</span>
               </Link>
               <Link to={props.linkToOne} className={'our-mission-item-links'}>
