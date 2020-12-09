@@ -3,11 +3,13 @@
 .header-wrapper {
   display: inline-flex;
   margin: 0;
+  background-color: $main-red;
 }
 
 .header-image-wrapper {
   background-color: $main-blue;
-  width: 50%;
+  width: 52%;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
 .header-image {

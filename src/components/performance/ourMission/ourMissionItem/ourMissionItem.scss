@@ -74,7 +74,7 @@
 
 .our-mission-item-links {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 
@@ -85,6 +85,7 @@
   .our-mission-item-link-one {
     color: $main-blue;
     border-radius: 1rem;
+    padding-right: 1rem;
 
     &:hover {
       background-color: $main-red;
@@ -95,6 +96,7 @@
   .our-mission-item-link-two {
     color: $main-red;
     border-radius: 1rem;
+    padding-right: 1rem;
 
 
     &:hover {
@@ -120,6 +122,7 @@
   .our-mission-item-link-one {
     color: $main-red;
     border-radius: 1rem;
+    padding-right: 1rem;
 
     &:hover {
       background-color: #FFFFFF;
@@ -130,6 +133,7 @@
   .our-mission-item-link-two {
     color: #FFF;
     border-radius: 1rem;
+    padding-right: 1rem;
 
     &:hover {
       background-color: $main-red;
@@ -158,6 +162,7 @@
   .our-mission-item-link-one {
     color: #FFF;
     border-radius: 1rem;
+    padding-right: 1rem;
 
     &:hover {
       background-color: $main-blue;
@@ -168,6 +173,7 @@
   .our-mission-item-link-two {
     color: $main-blue;
     border-radius: 1rem;
+    padding-right: 1rem;
 
     &:hover {
       background-color: #FFFFFF;

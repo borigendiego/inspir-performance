@@ -7,7 +7,11 @@ import './ourmission.scss';
 const OurMission = () => {
     return(
         <div className={'our-mission-section'} id={'mission'}>
-            <div className={'our-mission-white-overlay'}/>
+            <div className={'our-mission-white-overlay'}>
+                <Link to={'/'} className={'our-mission-back-arrow'}>
+                    <span className={'our-mission-span'}>&#8249; BACK</span>
+                </Link>
+            </div>
             <div className={'our-mission-blue-overlay'}/>
             <div className={'our-mission-red-overlay'}/>
             <div className={'our-mission-text'}>
