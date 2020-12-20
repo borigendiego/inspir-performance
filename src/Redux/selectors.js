@@ -1,3 +1,3 @@
-export const getEliteText = (store) => {
-  return store && store.sportPerformance ? store.sportPerformance.eliteText : ''
+export const getHomeContent = (store) => {
+  return store && store.sportPerformance ? store.sportPerformance : ''
 };
