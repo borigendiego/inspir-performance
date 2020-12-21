@@ -1,18 +1,30 @@
-import { GET_ELITE_TEXT } from "../actionTypes";
+import { INIT_HOME_CONTENT, INIT_PERFORMANCE_CONTENT } from '../actionTypes';
 
 const initialState = {
-    eliteText: '',
-    performanceText: ''
+    bannerTitle: '',
+    bannerSubtitle: '',
+    performanceTitle: '',
+    performanceText: '',
+    businessText: '',
+    eliteAthletesText: '',
+    coDevelopmentText: '',
+    executiveSupportText: '',
 };
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case GET_ELITE_TEXT : {
+        case INIT_HOME_CONTENT : {
             return {
                 ...state,
-                eliteText: 'Gomi'
+                ...action.content,
+            }
+        }
+        case INIT_PERFORMANCE_CONTENT : {
+            return {
+                ...state,
+                ...action.content,
             }
         }
         default: return state;
     }
-}
+}   

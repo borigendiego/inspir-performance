@@ -1,13 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
 import {
     BrowserRouter as Router,
     Switch,
     Route
 } from 'react-router-dom';
+//API
+import { getPerformanceSectionContent} from './API';
 //Constants
 import { ROUTES_NAMES } from './constants';
-import { ELITE_TEXT, DEVELOPMENT_TEXT, EXECUTIVE_TEXT } from './components/performance/ourMission/ourMissionItem/constant'
+//Redux
+import { connect } from 'react-redux';
+import { getHomeContent } from './Redux/selectors';
+import { initPerformanceContent } from './Redux/actions';
 //Components
 import Header from './components/header';
 import Home from './components/home';
@@ -17,7 +22,16 @@ import OurMission from './components/performance/ourMission';
 import OurMissionItem from './components/performance/ourMission/ourMissionItem'
 import PerformanceMobile from './components/performance/performanceMobile';
 
-function App() {
+const App = (props) => {
+    const { initPerformanceContent, homeContent } = props;
+
+    useEffect(() => {
+        getPerformanceSectionContent()
+            .then(res => {
+                return initPerformanceContent(res);
+            })
+            .catch(err => console.log('>>error', err))
+    }, [initPerformanceContent]);
   return (
     <div className='App'>
         <Router>
@@ -34,7 +48,8 @@ function App() {
                 </Route>
                 <Route exact path={ROUTES_NAMES.ELITE}>
                     <OurMissionItem
-                        title={'ELITE ATHLETES'} text={ELITE_TEXT}
+                        title={'ELITE ATHLETES'}
+                        text={homeContent.eliteAthletesText}
                         myClassName={'our-mission-elite'}
                         linkTextOne={'CO-DEVELOPMENT WITH STAFF AND MANAGERS'}
                         linkTextTwo={'EXECUTIVE SUPPORT'}
@@ -44,7 +59,8 @@ function App() {
                 </Route>
                 <Route exact path={ROUTES_NAMES.CO}>
                     <OurMissionItem
-                        title={'CO-DEVELOPMENT WITH MANAGERS AND STAFF'} text={DEVELOPMENT_TEXT}
+                        title={'CO-DEVELOPMENT WITH MANAGERS AND STAFF'}
+                        text={homeContent.coDevelopmentText}
                         myClassName={'our-mission-co'}
                         linkTextOne={'EXECUTIVE SUPPORTS'}
                         linkTextTwo={'ELITE ATHLETES'}
@@ -54,7 +70,7 @@ function App() {
                 </Route>
                 <Route exact path={ROUTES_NAMES.EXECUTIVE}>
                     <OurMissionItem
-                        title={'EXECUTIVE SUPPORT'} text={EXECUTIVE_TEXT}
+                        title={'EXECUTIVE SUPPORT'} text={homeContent.executiveSupportText}
                         myClassName={'our-mission-executive'}
                         linkTextOne={'ELITE ATHLETES'}
                         linkTextTwo={'CO-DEVELOPMENT WITH STAFF AND MANAGERS'}
@@ -68,4 +84,15 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    homeContent: getHomeContent(state),
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    initPerformanceContent: (values) => dispatch(initPerformanceContent(values)),
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App)
