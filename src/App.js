@@ -15,6 +15,7 @@ import Performance from './components/performance';
 import Contact from './components/contact';
 import OurMission from './components/performance/ourMission';
 import OurMissionItem from './components/performance/ourMission/ourMissionItem'
+import PerformanceMobile from './components/performance/performanceMobile';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                     <Header />
                     <Home />
                     <Performance />
+                    <PerformanceMobile />
                     <Contact />
                 </Route>
                 <Route path={ROUTES_NAMES.MISSION}>

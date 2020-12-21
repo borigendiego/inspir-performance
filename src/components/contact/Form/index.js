@@ -27,7 +27,7 @@ const Form = () => {
                 </section>
                 <section className={'contact-item'}>
                     <label className={'contact-label'}>YOUR MESSAGE</label>
-                    <textarea id={'message'} name={'message'} rows={'5'} cols={'45'} className={'contact-input-box'}/>
+                    <textarea id={'message'} name={'message'} rows={'5'} cols={'45'} className={'contact-input contact-box'}/>
                 </section>
                 <section className={'contact-item'}>
                     <input type={'submit'} value={'SEND'} className={'contact-input-button'}/>

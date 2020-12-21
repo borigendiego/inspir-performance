@@ -1,0 +1,51 @@
+@import '../../css/variables';
+
+.performance-mobile {
+  display: none;
+}
+
+@media (max-width: $xs-screen) {
+  .performance-mobile {
+    display: inline-block;
+  }
+
+  .performance-mobile-sport {
+    background-image: url('../../assets/images/sport.png');
+  }
+
+  .performance-mobile-business {
+    background-image: url('../../assets/images/business.png');
+  }
+
+  .overlay-red {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: $main-red;
+    opacity: 0.5;
+    z-index: 1;
+    height: 45%;
+    width: 90%;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .performance-mobile-title {
+    margin: 0;
+    font-family: $text-font-family;
+    color: $main-white;
+    z-index: 2;
+  }
+
+  .performance-mobile-subtitle {
+    color: $main-white;
+    z-index: 2;
+  }
+
+  .performance-mobile-text {
+    font-family: $book-font-family;
+    color: $main-white;
+    margin: 0;
+    text-align: left;
+    padding: 0 5% 5% 5%;
+    z-index: 2;
+  }
+}

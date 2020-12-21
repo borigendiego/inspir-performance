@@ -4,6 +4,8 @@
   background-image: url('../../assets/images/banner_fondo_1_con_transparencia.png');
   background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -12,17 +14,28 @@
   font-family: $text-font-family;
   color: #FFF;
   font-size: 4rem;
-  position: absolute;
-  top: 45vh;
-  left: 32vh;
+  margin: 0;
+  padding-top: 7%;
 }
 
 .home-title-two {
   font-family: $book-font-family;
   color: #FFF;
   font-size: 2.5rem;
-  position: absolute;
-  top: 60vh;
-  left: 90vh;
-  margin-top: 2.5rem;
+  padding-left: 34%;
+}
+
+@media (max-width: $xs-screen) {
+  .home-wrapper {
+    background-size: cover;
+    background-position: left;
+  }
+
+  .home-title-one {
+    font-size: 3rem;
+  }
+
+  .home-title-two {
+    font-size: 1rem;
+  }
 }

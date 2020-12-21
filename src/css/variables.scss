@@ -2,11 +2,17 @@
 
 $main-red: #B52127;
 $main-blue: #1D386C;
+$main-white: #FFFFFF;
 
 //Fonts
 $text-font-family: 'Gotham black italic';
 $medium-font-family: 'Gotham medium';
 $book-font-family: 'Gotham book';
+
+//Devices sizes
+$xs-screen: 450px;
+$md-screen: 700px;
+$lg-screen: 1024px;
 
 @font-face {
   font-family: 'Gotham book';

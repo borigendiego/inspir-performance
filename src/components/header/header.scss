@@ -1,14 +1,17 @@
 @import '../../css/variables';
 
 .header-wrapper {
-  display: inline-flex;
+  display: flex;
+  position: fixed;
   margin: 0;
   background-color: $main-red;
+  z-index: 4;
+  height: 13%;
 }
 
 .header-image-wrapper {
   background-color: $main-blue;
-  width: 52%;
+  width: 50%;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
@@ -22,23 +25,22 @@
 }
 
 .nav-menu {
-  display: inline-flex;
+  display: flex;
   background-color: $main-red;
   box-sizing: border-box;
   width: 50%;
   margin: 0;
   position: relative;
-  padding-top: 0.5rem;
-  padding-left: 10rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-element {
-  margin: 0 1rem;
+  margin: 0 2rem;
   font-size: 0.85rem;
   display: inline-block;
   width: 7rem;
   font-family: $medium-font-family;
-  padding-top: 1.5rem;
 
   a {
     text-decoration: none;
@@ -47,5 +49,32 @@
   &:hover {
     opacity: 0.3;
     transition: all 0.5s;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: $xs-screen) {
+  .header-wrapper {
+    background-color: $main-blue;
+    position: static;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .header-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-left: 25%;
+  }
+
+  .header-image {
+    width: 80%;
   }
 }

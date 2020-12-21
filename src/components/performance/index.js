@@ -14,7 +14,7 @@ const Performance = () => {
     const [isRightHover, setIsRightHover] = useState(false);
 
     return(
-        <div className={'performance-section'} style={isRightHover ?{backgroundImage: business}: {backgroundImage: sports}}>
+        <div className={'performance-section'} id={'performance'} style={isRightHover ?{backgroundImage: business}: {backgroundImage: sports}}>
                 <div className={'items-wrapper'}>
                     <Link to={ROUTES_NAMES.MISSION}>
                         <div
