@@ -30,23 +30,9 @@ const Performance = (props) => {
     }, [initHomeContent]);
 
     return(
-<<<<<<< HEAD
-        <div className={'performance-section'} id={'performance'} style={isRightHover ?{backgroundImage: business}: {backgroundImage: sports}}>
-                <div className={'items-wrapper'}>
-                    <Link to={ROUTES_NAMES.MISSION}>
-                        <div
-                            className={`${isRightHover ? 'performance-items hide-section item-one' : 'performance-items item-one'}`}
-                            onMouseEnter={() => setIsLeftHover(true)}
-                            onMouseLeave={() => setIsLeftHover(false)}
-                        >
-                            <h2 className={'performance-item-title-left'}>SPORT PERFORMANCE</h2>
-                        </div>
-                    </Link>
-=======
-        <div className={'performance-section'} style={isRightHover ? {backgroundImage: business} : {backgroundImage: sports}}>
+        <div className={'performance-section'} id={'performance'} style={isRightHover ? {backgroundImage: business} : {backgroundImage: sports}}>
             <div className={'items-wrapper'}>
                 <Link to={ROUTES_NAMES.MISSION}>
->>>>>>> 88a22e6a4a5573845edffc84f4569504665a4f7e
                     <div
                         className={`${isRightHover ? 'performance-items hide-section item-one' : 'performance-items item-one'}`}
                         onMouseEnter={() => setIsLeftHover(true)}
