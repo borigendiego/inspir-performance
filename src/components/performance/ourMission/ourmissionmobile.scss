@@ -1,0 +1,84 @@
+@import '../../../css/variables';
+
+.our-mission-mobile {
+  display: none;
+}
+
+@media (max-width: $xs-screen) {
+  .our-mission-mobile {
+    display: inline-block;
+  }
+
+  .our-mission-mobile-title {
+    font-family: $text-font-family;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    padding: 2%;
+  }
+
+  .our-mission-mobile-text {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    font-family: $book-font-family;
+    padding: 2% 4%;
+  }
+
+  .our-mission-mobile-elite {
+    background-image: url('../../../assets/images/image-elite.jpg');
+    background-size: cover;
+    position: relative;
+  }
+
+  .first-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: $main-white;
+    z-index: 1;
+  }
+
+  .our-mission-mobile-co {
+    background-image: url('../../../assets/images/image-codevelopment.jpg');
+    background-size: cover;
+    color: $main-white;
+    position: relative;
+  }
+
+  .second-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: $main-blue;
+    z-index: 1;
+  }
+
+  .our-mission-mobile-executive {
+    background-image: url('../../../assets/images/executive.jpg');
+    background-size: cover;
+    color: $main-white;
+    position: relative;
+  }
+
+  .third-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: $main-red;
+    z-index: 1;
+  }
+
+}

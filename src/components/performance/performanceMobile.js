@@ -1,23 +1,27 @@
 import React from 'react';
-import business from '../../assets/images/business.png';
-import sports from '../../assets/images/sport.png';
 import './performanceMobile.scss'
+import {
+    Link
+} from 'react-router-dom';
+import {ROUTES_NAMES} from '../../constants';
 
 const PerformanceMobile = () => {
     return (
         <div className={'performance-mobile'}>
-            <div className={'performance-mobile-sport'}>
-                <h1 className={'performance-mobile-title'}>SPORT PERFORMANCE</h1>
-                <h3 className={'performance-mobile-subtitle'}>Performance and optimisator for elite athletes and teams</h3>
-                <p className={'performance-mobile-text'}>We provide innovative and effective solution to increase
-                    the potential on every
-                    professional athletes. As elite performance experts, we are helping top athletes and
-                    executives in competitive fields unlock the power of the mind and create the mental
-                    toughness to be performant We are collaborating with managers and staff members in
-                    addition to our research to provide an innovantive and efficient solution for
-                    our partnerships</p>
-                <div className={'overlay-red'} />
-            </div>
+            <Link to={ROUTES_NAMES.MISSION_MO} className={'performance-mobile-link'}>
+                <div className={'performance-mobile-sport'}>
+                    <h1 className={'performance-mobile-title'}>SPORT PERFORMANCE</h1>
+                    <h3 className={'performance-mobile-subtitle'}>Performance and optimisator for elite athletes and teams</h3>
+                    <p className={'performance-mobile-text'}>We provide innovative and effective solution to increase
+                        the potential on every
+                        professional athletes. As elite performance experts, we are helping top athletes and
+                        executives in competitive fields unlock the power of the mind and create the mental
+                        toughness to be performant We are collaborating with managers and staff members in
+                        addition to our research to provide an innovantive and efficient solution for
+                        our partnerships</p>
+                    <div className={'overlay-red'} />
+                </div>
+            </Link>
             <div className={'performance-mobile-business'}>
                 <h1 className={'performance-mobile-title'}>BUSINESS PERFORMANCE</h1>
                 <h3 className={'performance-mobile-subtitle'}>Performance optimisation for business head,

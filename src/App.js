@@ -21,6 +21,8 @@ import Contact from './components/contact';
 import OurMission from './components/performance/ourMission';
 import OurMissionItem from './components/performance/ourMission/ourMissionItem'
 import PerformanceMobile from './components/performance/performanceMobile';
+import OurMissionMobile from './components/performance/ourMission/ourMissionMobile';
+
 
 const App = (props) => {
     const { initPerformanceContent, homeContent } = props;
@@ -76,6 +78,13 @@ const App = (props) => {
                         linkTextTwo={'CO-DEVELOPMENT WITH STAFF AND MANAGERS'}
                         linkToOne={'/elite'}
                         linkToTwo={'/co-development'}
+                    />
+                </Route>
+                <Route exact path={ROUTES_NAMES.MISSION_MO}>
+                    <OurMissionMobile
+                        eliteText={homeContent.eliteAthletesText}
+                        developmentText={homeContent.coDevelopmentText}
+                        executiveText={homeContent.executiveSupportText}
                     />
                 </Route>
             </Switch>

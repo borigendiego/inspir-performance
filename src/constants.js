@@ -3,7 +3,8 @@ const ROUTES_NAMES = {
     MISSION: '/mission',
     ELITE: '/elite',
     CO: '/co-development',
-    EXECUTIVE: '/executive'
+    EXECUTIVE: '/executive',
+    MISSION_MO: '/mission-mo'
 };
 
 
