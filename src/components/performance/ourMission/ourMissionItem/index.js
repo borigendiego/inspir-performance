@@ -1,5 +1,6 @@
 import React from 'react';
-import './ourMissionItem.scss'
+//Styles
+import './ourMissionItem.scss';
 import {
     Link
 } from 'react-router-dom';

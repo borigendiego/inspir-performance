@@ -3,6 +3,7 @@
 .home-wrapper {
   background-image: url('../../assets/images/banner_fondo_1_con_transparencia.png');
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,8 +28,7 @@
 
 @media (max-width: $xs-screen) {
   .home-wrapper {
-    background-size: cover;
-    background-position: left;
+    background-size: 100% 100%;
   }
 
   .home-title-one {

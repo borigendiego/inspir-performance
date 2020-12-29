@@ -4,31 +4,35 @@
   background-image: url('../../assets/images/contact.png');
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  display: inline-flex;
-  width: 100%;
+  box-sizing: border-box;
+  padding: 0 3%;
+  display: flex;
   position: relative;
+  flex-direction: column;
 }
 
 .contact-logo {
-  width: 40%;
-  padding-left: 60%;
-  padding-bottom: 10%;
+  width: 80%;
 }
 
 .contact-content {
   display: flex;
+  align-items: flex-end;
   color: #FFFFFF;
-  font-size: 1.3rem;
-  text-align: right;
   flex-direction: column;
-  justify-content: center;
-  margin-right: 3%;
+  justify-content: space-between;
+  padding-top: 10%;
+  width: 100%;
 
   .country {
     font-size: 2rem;
     font-family: $book-font-family;
   }
+}
+
+.contact-text {
+  font-size: 1.3rem;
+  text-align: right;
 }
 
 .contact-info-item {
@@ -48,7 +52,22 @@
 }
 
 @media (max-width: $xs-screen) {
+  .contact-section {
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: $md-screen) {
+  .contact-section {
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 3%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
   .contact-content {
-    display: none;
+    height: 50%;
+    width: 35%;
   }
 }

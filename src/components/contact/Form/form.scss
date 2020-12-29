@@ -1,32 +1,35 @@
 @import '../../../css/variables';
+
 .form-section {
-  margin-left: 7rem;
-  position: relative;
+  width: 100%;
   z-index: 2;
 }
 
 .contact-title {
   font-family: $text-font-family;
   text-align: left;
-  position: relative;
-  left: 3rem;
 }
 
 .contact-form {
-  display: inline;
-  align-content: start;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
 }
 
-.contact-input {
+.contact-input, .contact-select {
   border: 1px solid #ccc;
-  height: 1.5rem;
-  width: 25em;
+  box-sizing: border-box;
+  height: 2rem;
+  width: 100%;
 }
 
 .contact-item {
   text-align: left;
-  padding: 1rem 0 0.5rem 3rem;
+
+  textarea {
+    height: 80%;
+  }
 }
 
 .contact-label {
@@ -55,21 +58,19 @@ input[type=submit] {
   }
 }
 
-.contact-select {
-  border: 1px solid #ccc;
-  height: 1.8rem;
-  width: 25.4em;
+@media (max-width: $xs-screen) {
+  .form-section { margin: 0; }
+
+  .form-section { margin-top: 15%; }
+
+  input[type=submit] { width: 100%; }
 }
 
-@media (max-width: $xs-screen) {
+@media (min-width: $md-screen) {
   .form-section {
-    margin: 0;
+    width: 40%;
   }
-  .contact-item {
-    padding: 3% 0 3% 5%;
-  }
-
-  .form-section {
-    margin-top: 15%;
+  .contact-form {
+    height: 75%;
   }
 }
