@@ -8,15 +8,18 @@
   .performance-mobile {
     display: inline-block;
     position: relative;
+
+    a { text-decoration: none; }
   }
 
-  .performance-container {
-    //padding: 5%;
-    position: relative;
-  }
+  .performance-container { position: relative; }
 
-  .performance-mobile-link {
+  .see-more-link {
     text-decoration: none;
+    color: #FFFFFF;
+    font-size: clamp(18px, 10vw, 26px);
+    position: relative;
+    z-index: 3;
   }
 
   .performance-mobile-sport {

@@ -75,9 +75,9 @@
 
 .move-right {
   clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-  width: 40%;
+  width: 60%;
   right: 0;
-  padding: 0 20px 0 300px;
+  padding: 0 2% 0 20%;
 
   .hide-section {
     display: inline;
@@ -89,9 +89,9 @@
 
 .move-left {
   clip-path: polygon(0% 0%, 100% 0, 80% 100%, 0 100%);
-  width: 40%;
+  width: 60%;
   left: 0;
-  padding: 0 300px 0 20px;
+  padding: 0 20% 0 2%;
 
   .hide-section {
     display: inline;
