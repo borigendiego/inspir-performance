@@ -4,7 +4,7 @@
   background-image: url('../../assets/images/banner_fondo_1_con_transparencia.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +24,12 @@
   color: #FFF;
   font-size: 2.5rem;
   padding-left: 34%;
+}
+
+@media (min-width: $md-screen) {
+  .home-wrapper {
+    height: 100vh;
+  }
 }
 
 @media (max-width: $xs-screen) {
