@@ -10,6 +10,7 @@
     position: relative;
 
     a { text-decoration: none; }
+    .secondary-button { width: 90%; }
   }
 
   .performance-container { position: relative; }
@@ -68,6 +69,7 @@
     color: $main-white;
     z-index: 2;
     position: relative;
+    margin: 6% 0;
   }
 
   .performance-mobile-text {
