@@ -44,7 +44,7 @@
   margin-right: 11rem;
   margin-top: 3rem;
   font-family: $text-font-family;
-  color: #FFFFFF;
+  color: $main-white;
   font-size: 2.5rem;
 }
 
@@ -52,7 +52,7 @@
   margin-left: 11rem;
   margin-top: 15rem;
   font-family: $text-font-family;
-  color: #FFFFFF;
+  color: $main-white;
   font-size: 2.5rem;
 }
 
@@ -107,13 +107,10 @@
 }
 
 .red-background-title {
-  color: #FFF;
   display: block;
-  font-size: 1.4rem;
   text-align: left;
   margin-bottom: 2rem;
   margin-top: 6rem;
-  font-family: $book-font-family;
 }
 
 .red-background-text {

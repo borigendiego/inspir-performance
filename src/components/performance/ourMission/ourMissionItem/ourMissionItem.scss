@@ -106,18 +106,18 @@
   }
 
   .our-mission-item-first-overlay {
-    background-color: #FFFFFF;
+    background-color: $main-white;
   }
 
   .our-mission-item-second-overlay {
-    background-color: #FFFFFF;
+    background-color: $main-white;
   }
 }
 
 .our-mission-co {
   background-image: url('../../../../assets/images/image-codevelopment.jpg');
   background-size: cover;
-  color: #FFFFFF;
+  color: $main-white;
 
   .our-mission-item-link-one {
     color: $main-red;
@@ -125,7 +125,7 @@
     padding-right: 1rem;
 
     &:hover {
-      background-color: #FFFFFF;
+      background-color: $main-white;
       transition: all 0.3s;
     }
   }
@@ -150,14 +150,14 @@
   }
 
   .our-mission-item-back-arrow {
-    color: #FFFFFF;
+    color: $main-white;
   }
 }
 
 .our-mission-executive {
   background-image: url('../../../../assets/images/executive.jpg');
   background-size: cover;
-  color: #FFFFFF;
+  color: $main-white;
 
   .our-mission-item-link-one {
     color: #FFF;
@@ -176,7 +176,7 @@
     padding-right: 1rem;
 
     &:hover {
-      background-color: #FFFFFF;
+      background-color: $main-white;
       transition: all 0.3s;
     }
   }
@@ -190,7 +190,7 @@
   }
 
   .our-mission-item-back-arrow {
-    color: #FFFFFF;
+    color: $main-white;
   }
 }
 

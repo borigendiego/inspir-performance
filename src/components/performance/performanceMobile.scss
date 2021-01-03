@@ -17,7 +17,7 @@
 
   .see-more-link {
     text-decoration: none;
-    color: #FFFFFF;
+    color: $main-white;
     font-size: clamp(18px, 10vw, 26px);
     position: relative;
     z-index: 3;
@@ -58,9 +58,6 @@
   }
 
   .performance-mobile-title {
-    margin: 0;
-    font-family: $text-font-family;
-    color: $main-white;
     z-index: 2;
     position: relative;
   }
@@ -73,7 +70,6 @@
   }
 
   .performance-mobile-text {
-    font-family: $book-font-family;
     color: $main-white;
     margin: 0;
     padding: 0 5% 5% 5%;

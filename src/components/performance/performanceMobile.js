@@ -9,8 +9,8 @@ const PerformanceMobile = () => {
     return (
         <div className={'performance-mobile'}>
             <div className={'performance-container performance-mobile-sport'}>
-                <h1 className={'performance-mobile-title'}>SPORT PERFORMANCE</h1>
-                <h3 className={'performance-mobile-subtitle'}>Performance and optimisator for elite athletes and teams</h3>
+                <h2 className={'performance-mobile-title'}>SPORT PERFORMANCE</h2>
+                <h4 className={'performance-mobile-subtitle'}>Performance and optimisator for elite athletes and teams</h4>
                 <p className={'performance-mobile-text'}>
                     We provide innovative and effective solution to increase the potential on every
                     professional athletes. As elite performance experts, we are helping top athletes and
@@ -25,10 +25,10 @@ const PerformanceMobile = () => {
                 <div className={'red-overlay'} />
             </div>
             <div className={' performance-container performance-mobile-business'}>
-                <h1 className={'performance-mobile-title'}>BUSINESS PERFORMANCE</h1>
-                <h3 className={'performance-mobile-subtitle'}>Performance optimisation for business head,
+                <h2 className={'performance-mobile-title'}>BUSINESS PERFORMANCE</h2>
+                <h4 className={'performance-mobile-subtitle'}>Performance optimisation for business head,
                     elite manager and
-                    executive.</h3>
+                    executive.</h4>
                 <p className={'performance-mobile-text'}>
                     We analyse and diagnose performance situations in order to offer to the Executives
                     a solution adapted to this situation. INSPIR PERFORMANCE is a combination of

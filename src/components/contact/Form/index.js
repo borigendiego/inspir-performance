@@ -6,7 +6,7 @@ import { FORM_INPUTS } from '../../common/constants';
 const Form = () => {
     return(
         <div className={'form-section'} id={'contact'}>
-            <h1 className={'contact-title'}>CONTACT US</h1>
+            <h2 className={'contact-title'}>CONTACT US</h2>
             <form className={'contact-form'}>
                 {
                     FORM_INPUTS.map((input, index) =>

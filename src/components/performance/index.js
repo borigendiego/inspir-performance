@@ -51,7 +51,7 @@ const Performance = (props) => {
                 <div className={isRightHover ? 'red-background move-left ' : isLeftHover ?
                     'red-background move-right' : 'red-background' }>
                     <div className={'red-background-content-left hide-section'}>
-                        <h4 className="red-background-title">
+                        <h4 className={'red-background-title'}>
                             Performance optimisator<br/>For elite athletes
                             and teams
                         </h4>
@@ -60,7 +60,7 @@ const Performance = (props) => {
                         </p>
                     </div>
                     <div className={'red-background-content-right hide-section'}>
-                        <h4 className="red-background-title">Performance optimisation<br/>For business head,
+                        <h4 className={'red-background-title'}>Performance optimisation<br/>For business head,
                             elite manager and
                             executive.</h4>
                         <p className={'red-background-text'}>
