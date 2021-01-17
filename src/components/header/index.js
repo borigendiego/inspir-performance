@@ -4,7 +4,7 @@ import './header.scss';
 
 const Header = () => {
     return (
-        <div className={'header-wrapper'}>
+        <nav className={'header-wrapper'}>
             <div className={'header-image-wrapper'}>
                 <img alt={'logo'} className="header-image" src={logo} />
             </div>
@@ -13,7 +13,17 @@ const Header = () => {
                 <li className={'nav-element'}><a href={'#performance'}>WHAT WE DO</a></li>
                 <li className={'nav-element'}><a href={'#contact'}>CONTACT US</a></li>
             </ul>
-        </div>
+
+            <script type={'text/javascript'}>
+                {
+                    window.addEventListener('scroll', function() {
+                        let header = document.querySelector('nav');
+
+                        header.classList.toggle("sticky", window.scrollY > 0);
+                    })
+                }
+            </script>
+        </nav>
     )
 };
 
