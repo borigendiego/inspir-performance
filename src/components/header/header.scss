@@ -5,22 +5,15 @@
   position: fixed;
   margin: 0;
   z-index: 4;
-  height: 13%;
+  height: 10vh;
   width: 100%;
   justify-content: flex-end;
-}
-
-.sticky {
-  .header-image-wrapper {
-    height: 100%;
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-  }
 }
 
 .header-image-wrapper {
   background-color: $main-blue;
   width: 50%;
-  clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%);
   position: absolute;
   left: 0;
   height: 120%;
@@ -32,7 +25,7 @@
 }
 
 .header-image {
-  width: 35%;
+  width: 30%;
   height: 50%;
   position: relative;
 }
@@ -66,14 +59,21 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@media (min-width: $md-screen) {
+  .sticky {
+    .header-image-wrapper {
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%)
+    }
+  }
 }
 
 @media (max-width: $xs-screen) {
+  #large-screen-menu { display: none; }
+
   .header-wrapper {
+    align-items: center;
     background-color: $main-blue;
-    position: static;
   }
 
   .nav-menu {
@@ -84,8 +84,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    padding-left: 25%;
+    height: 100%;
   }
 
   .header-image {

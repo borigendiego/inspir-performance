@@ -1,19 +1,30 @@
 @import '../../css/variables';
 
 .home-wrapper {
-  background-image: url('../../assets/images/banner_fondo_1_con_transparencia.png');
-  background-size: cover;
+  background-image: url('../../assets/images/running_banner_b&n.jpg');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.home-title-one {
-  padding-top: 7%;
+.home-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffff;
+  opacity: 0.4;
+  clip-path: polygon(0 0, 50% 0, 37% 100%, 0% 100%);
+  z-index: 1;
 }
+
+.home-title-one { padding-top: 7%; }
 
 .home-title-two {
   font-family: $book-font-family;

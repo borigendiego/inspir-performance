@@ -1,0 +1,148 @@
+@import '../../../css/variables.scss';
+
+#menuToggle {
+  display: none;
+}
+
+//TODO: Check all the px values and change for % or em
+@media (max-width: $xs-screen) {
+  #menuToggle
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 1% 0;
+    width: 25px;
+    height: 25px;
+    padding: 1% 0;
+    right: 12%;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Hamburger menu
+   */
+  #menuToggle span
+  {
+    background: #cdcdcd;
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: relative;
+    border-radius: 3px;
+    max-width: 34px;
+
+    z-index: 1;
+
+    transform-origin: 1% 1%;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child
+  {
+    transform-origin: 0 0;
+  }
+
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0 100%;
+  }
+
+  /*
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #ffffff;
+  }
+
+  /*
+   * Hide the middle line one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Rotate line direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(-1px, -1px);
+  }
+
+  #menu
+  {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -100%;
+    padding: 160% 70%;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transition: all 500ms cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  #menu li
+  {
+    padding: 5% 0;
+    font-size: clamp(100%, 5vw, 24px);
+    //font-family: $title-font-family;
+    visibility: hidden;
+    transition: all 150ms;
+  }
+
+  /*
+   * Make slide came from right
+   */
+  #menuToggle input:checked ~ #menu
+  {
+    width: 80vw;
+    height: 50vh;
+    background-color: hsla(0,0%,89.4%,.901961);
+    transform: translate(-68vw, 0);
+
+    li {
+      visibility: visible;
+      border-bottom: solid;
+    }
+  }
+}

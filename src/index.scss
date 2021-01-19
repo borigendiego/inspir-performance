@@ -7,6 +7,9 @@
   padding: 0;
 }
 
+
+html { scroll-behavior: smooth; }
+
 h1 {
   color: $main-white;
   font-family: $text-font-family;
@@ -39,13 +42,9 @@ p {
   font-family: $book-font-family;
 }
 
-ul {
-  list-style-position: inside;
-}
+ul { list-style-position: inside; }
 
-.App {
-  text-align: center;
-}
+.App { text-align: center; }
 
 .secondary-button {
   background-color: $main-blue;
