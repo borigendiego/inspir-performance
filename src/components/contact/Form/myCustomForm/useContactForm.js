@@ -42,18 +42,15 @@ const useCustomForm = ({initialValues,fields, onSubmit}) => {
             if (field.validations) {
                 field.validations.forEach(validation => newErrors[field.name] = validation(values[field.name]));
                 setErrors({...errors, ...newErrors});
-                console.log('>>errors1', newErrors);
             }
         });
-        console.log('>>errors', newErrors);
-        newErrors = Object.keys(newErrors).forEach(key => {
-            //TODO: Seguir desde aca
-            console.log('>>key', key);
-                return newErrors[key] === undefined ? delete newErrors[key] : {}
-            });
+        Object.keys(newErrors).forEach(key => {
+            if (newErrors[key] === undefined) {
+                delete newErrors[key];
+            }
+        });
 
-        console.log('>>newerrors', newErrors);
-        if (!newErrors) {
+        if (Object.keys(newErrors).length === 0) {
             onSubmit(event.target);
         }
     };

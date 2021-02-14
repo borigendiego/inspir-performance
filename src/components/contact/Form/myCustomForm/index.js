@@ -20,35 +20,12 @@ const MyCustomForm = ({ fields }) => {
         values,
         handleChange,
         errors,
-        setErrors,
         setValues,
         handleSubmit,
     } = useContactForm({
         initialValues,
         fields,
         onSubmit: (form) => {
-            console.log('>>form', form);
-            if (!errors && (Object.keys(errors).length === 0 && errors.constructor === Object)) {
-                console.log('>>33');
-                //TODO: Move emails sender to a proper API
-                emailjs.sendForm(process.env.REACT_APP_MAIL_VALUE, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_USER_ID)
-                    .then(() => {
-                        setValues(initialValues);
-                        setMessageSent('succeed');
-                    }, (error) => {
-                        console.log(error.text);
-                        setMessageSent('error');
-                    });
-            }
-        }
-    });
-
-    /*const onSubmit = (e, form) => {
-        console.log('>>errors', errors );
-        const cleanedErrors = Object.keys(errors).forEach(key => errors[key] === undefined ? delete errors[key] : {});
-        console.log('>>cleanedErrors', cleanedErrors);
-        if (!errors && (Object.keys(errors).length === 0 && errors.constructor === Object)) {
-            console.log('>>33');
             //TODO: Move emails sender to a proper API
             emailjs.sendForm(process.env.REACT_APP_MAIL_VALUE, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_USER_ID)
                 .then(() => {
@@ -59,24 +36,7 @@ const MyCustomForm = ({ fields }) => {
                     setMessageSent('error');
                 });
         }
-    };*/
-
-    /*const handleSubmit = (event) => {
-        if (event) event.preventDefault();
-        let newErrors = {};
-
-        for (const [index, [key, value]] of Object.entries(Object.entries(values))) {
-            if (!value && fields[index].validations) {
-                //fields[index].validations.forEach(validation => newErrors[key] = validation(value));
-                fields[index].validations.forEach(validation => {
-                        newErrors = {...newErrors, [key]: validation(value)}
-                });
-            }
-        }
-        setErrors(newErrors);
-
-        onSubmit({ values }, event.target);
-    };*/
+    });
 
     const renderSentMessage = () => {
         if (messageSent === 'succeed') {
