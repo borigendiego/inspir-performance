@@ -1,38 +1,42 @@
 import React from 'react';
+//Styles
 import './form.scss';
-import { FORM_INPUTS } from '../../common/constants';
-
+//Fields validations
+import { required, email } from './fieldValidations';
+//Form hook
+import MyForm from './myCustomForm';
 
 const Form = () => {
     return(
         <div className={'form-section'} id={'contact'}>
             <h2 className={'contact-title'}>CONTACT US</h2>
-            <form className={'contact-form'}>
-                {
-                    FORM_INPUTS.map((input, index) =>
-                        (
-                            <section className={'contact-item'} key={index}>
-                                <label className={'contact-label'}>{input.labelName}</label>
-                                <input type={input.type} name={input.id} id={input.id} className={'contact-input'}/>
-                            </section>
-                        )
-                    )
-                }
-                <section className={'contact-item'}>
-                    <label className={'contact-label'}>HOW DO YOU PREFER TO BE CONTACTED?</label>
-                    <select className={'contact-select'}>
-                        <option value={'Email'}>Email</option>
-                        <option value={'Phone'}>Phone</option>
-                    </select>
-                </section>
-                <section className={'contact-item'}>
-                    <label className={'contact-label'}>YOUR MESSAGE</label>
-                    <textarea id={'message'} name={'message'} rows={'5'} cols={'45'} className={'contact-input contact-box'}/>
-                </section>
-                <section className={'contact-item'}>
-                    <input type={'submit'} value={'SEND'} className={'contact-input-button'}/>
-                </section>
-            </form>
+            <MyForm
+                fields={[
+                    {
+                        name: 'name',
+                        type: 'text',
+                        label: 'Name (Required)',
+                        validations: [required],
+                    },
+                    {
+                        name: 'mail',
+                        type: 'text',
+                        label: 'Email (Required)',
+                        validations: [email],
+                    },
+                    {
+                        name: 'subject',
+                        type: 'text',
+                        label: 'Subject',
+                    },
+                    {
+                        name: 'Message',
+                        type: 'textArea',
+                        label: 'Message',
+                    }
+                ]}
+
+            />
         </div>
     )
 };
