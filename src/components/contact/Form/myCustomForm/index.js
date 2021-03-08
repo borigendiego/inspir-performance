@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import emailjs from 'emailjs-com';
 //Hook
 import useContactForm from './useContactForm';
@@ -7,7 +8,7 @@ import MyInput from './CustomInput';
 //Styles
 import './customForm.scss';
 
-const MyCustomForm = ({ fields }) => {
+const MyCustomForm = ({ fields, onSuccessMessage, onErrorMessage }) => {
     const [messageSent, setMessageSent] = useState('');
     const initialValues = {
         name: '',
@@ -27,7 +28,10 @@ const MyCustomForm = ({ fields }) => {
         fields,
         onSubmit: (form) => {
             //TODO: Move emails sender to a proper API
-            emailjs.sendForm(process.env.REACT_APP_MAIL_VALUE, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_USER_ID)
+            emailjs.sendForm(
+                process.env.REACT_APP_MAIL_VALUE,
+                process.env.REACT_APP_TEMPLATE_ID,
+                form, process.env.REACT_APP_USER_ID)
                 .then(() => {
                     setValues(initialValues);
                     setMessageSent('succeed');
@@ -42,13 +46,13 @@ const MyCustomForm = ({ fields }) => {
         if (messageSent === 'succeed') {
             return <div className={'message succeed'}>
                 <h2>Thank you!</h2>
-                <p>Your message has been successfully sent. We will contact you very soon!</p>
+                <p>{onSuccessMessage}</p>
             </div>
         }
         if (messageSent === 'error') {
             return <div className={'message error'}>
                 <h2>Something went wrong</h2>
-                <p>Please try again or send and email to: support@mbanalyst.com</p>
+                <p>{onErrorMessage}</p>
             </div>
         }
         return null;
@@ -121,6 +125,12 @@ const MyCustomForm = ({ fields }) => {
             </section>
         </form>
     )
+};
+
+MyCustomForm.propTypes = {
+    fields: PropTypes.array,
+    onSuccessMessage: PropTypes.string,
+    onErrorMessage: PropTypes.string,
 };
 
 export default MyCustomForm

@@ -35,7 +35,8 @@ const Form = () => {
                         label: 'Message',
                     }
                 ]}
-
+                onSuccessMessage={'Your message has been successfully sent. We will contact you very soon!'}
+                onErrorMessage={'Please try again or send and email to: bregnier@inspirperformance.com'}
             />
         </div>
     )
