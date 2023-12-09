@@ -57,3 +57,60 @@ ul { list-style-position: inside; }
   position: relative;
   z-index: 3;
 }
+
+//Under construction page
+.under-construction {
+  background: linear-gradient(to right, #2a035a, #460478);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h5, h4, h6, p, a {
+    color: white;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    font-family: $book-font-family;
+  }
+  .content-wrapper {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    .illustration {
+      padding: 5rem;
+      margin: auto;
+    }
+    .text-wrapper {
+      margin: auto;
+      text-align: left;
+      padding: 2rem;
+    }
+  }
+  @media (max-width: $xs-screen) {
+    img {
+      max-width: 80%;
+    }
+    .content-wrapper {
+      .illustration {
+        padding: 3rem;
+      }
+      .text-wrapper {
+        padding: 2rem;
+      }
+    }
+  }
+}
